@@ -1,0 +1,575 @@
+/* === INLINE STYLE 0 === */
+/* HERO */
+  [data-header='logo'],
+  [data-header='nav-item'],
+  [data-header='cta'] {
+    opacity: 0;
+  }
+
+  [data-header='logo'] {
+    transform: translateY(-0.75rem);
+  }
+
+  [data-header='nav-item'],
+  [data-header='cta'] {
+    transform: translateY(-0.5rem);
+  }
+
+  [data-hero='bg'] {
+    transform: scale(1.12);
+    will-change: transform, opacity;
+  }
+  [data-hero='title'] {
+    opacity: 0;
+  }
+  [data-hero='cta-text'],
+  [data-hero='cta-btn'] {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-hero='bg'],
+    [data-hero='title'],
+    [data-hero='cta-text'],
+    [data-hero='cta-btn'] {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* ABOUT */
+  [data-about='caption'] {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  [data-about='img'] {
+    transform: scale(0.8);
+  }
+  [data-about='circle-icn'] {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  [data-about='text'] {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-about='caption'],
+    [data-about='img'],
+    [data-about='circle-icn'],
+    [data-about='text'] {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  [data-about='title'] {
+    opacity: 0;
+  }
+
+  /* SERVICES */
+  [data-services='caption'] {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  [data-services='title'] {
+    opacity: 0;
+  }
+  [data-services='subtitle'] {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  [data-service-card] {
+    opacity: 0;
+    transform: translateY(2.5rem) scale(0.96);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-services='caption'],
+    [data-services='title'],
+    [data-services='subtitle'],
+    [data-service-card] {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* WHY US */
+  [data-why-us='caption'] {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  [data-why-us='title'] {
+    opacity: 0;
+  }
+  [data-why-us='subtitle'] {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-why-us='caption'],
+    [data-why-us='title'],
+    [data-why-us='subtitle'] {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @media (min-width: 480px) and (orientation: landscape), (max-width: 479px) {
+    .why-us .why-us__card-wrap:not(.is-first) {
+      position: absolute;
+    }
+    .why-us .why-us__cards {
+      perspective: 100vw;
+      perspective-origin: 50% -50%;
+    }
+  }
+
+  /* TESTIMONIALS */
+  [data-testimonials='caption'] {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  [data-testimonials='title'] {
+    opacity: 0;
+  }
+  [data-testimonials='subtitle'] {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  .testimonials-card {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-testimonials='caption'],
+    [data-testimonials='title'],
+    [data-testimonials='subtitle'],
+    .testimonials-card {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* TEAM */
+  [data-team='caption'] {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  [data-team='title'] {
+    opacity: 0;
+  }
+  .team__splide {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-team='caption'],
+    [data-team='title'],
+    .team__splide {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* CTA */
+  [data-cta='bg'] {
+    transform: scale(1.12);
+    will-change: transform, opacity;
+  }
+  [data-cta='title'] {
+    opacity: 0;
+  }
+  [data-cta='text'],
+  [data-cta='btn'] {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-cta='bg'],
+    [data-cta='title'],
+    [data-cta='text'],
+    [data-cta='btn'] {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+/* === INLINE STYLE 1 === */
+/* Fluid responsive */
+  html {
+    font-size: calc(16 * (100vw / 1440));
+    scroll-padding-top: 6rem;
+  }
+
+  @media (max-width: 479px) {
+    html {
+      font-size: calc(16 * (100vw / 375));
+      scroll-padding-top: 4.375rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    html {
+      font-size: calc(16 * (100vw / 1920));
+    }
+  }
+
+  /* @media (min-width: 1024px) and (max-height: 800px) {
+    html {
+      font-size: calc(14*(100vw / 1440));
+    }
+  } */
+
+  img {
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 0.75rem;
+  }
+
+  /* Snippet gets rid of top margin on first element in any rich text*/
+  .w-richtext > :first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  /* Snippet gets rid of bottom margin on last element in any rich text*/
+  .w-richtext > :last-child,
+  .w-richtext ol li:last-child,
+  .w-richtext ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  a,
+  .w-dropdown-btn,
+  .w-dropdown-toggle,
+  .w-dropdown-link {
+    color: inherit;
+    text-decoration: inherit;
+    font-size: inherit;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Apply "..." after 3 lines of text */
+  [text-style-3lines] {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  /* Apply "..." after 2 lines of text */
+  [text-style-2lines] {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  /* BASE */
+  body:has([data-nav-menu-open]) {
+    overflow: hidden;
+  }
+  .header.is-scrolled .nav-overlay {
+    opacity: 1;
+  }
+  .split-lines-mask {
+    padding-bottom: 2rem;
+    margin-bottom: -2rem;
+    padding-right: 1.5rem;
+    margin-right: -1.5rem;
+  }
+
+  /* LINKS */
+  @media (min-width: 480px) and (hover: hover) {
+    .nav-list__link {
+      text-shadow: currentcolor 0px 1.75rem 0px;
+    }
+    .text-btn {
+      text-shadow: currentcolor 0px 1.7rem 0px;
+    }
+    .footer__link {
+      text-shadow: currentcolor 0px 1.65rem 0px;
+    }
+    .btn {
+      text-shadow: currentcolor 0px 1.65rem 0px;
+    }
+    .booking-form__support-link {
+      text-shadow: currentcolor 0px 1.5625rem 0px;
+    }
+    .service-card__top-caption {
+      text-shadow: currentcolor 0px 1.7rem 0px;
+    }
+  }
+
+  /* SLIDER */
+  body .splide__pagination {
+    display: none;
+  }
+  .slider-btn:disabled {
+    display: none;
+    opacity: 0;
+  }
+
+  /* STAGES */
+  .stages-card.is-final {
+    border-color: var(--_colors---primary-gray);
+    background-color: var(--_colors---primary-gray);
+  }
+  .stages-card.is-final .stages-card__nubmer {
+    color: var(--_colors---white-10);
+  }
+  .stages-card.is-final .stages-card__heading {
+    color: var(--_colors---white-80);
+  }
+  .stages-card.is-final .stages-card__title {
+    color: white;
+  }
+
+  /* TESTIMONIALS */
+  @media (min-width: 480px) {
+    .testimonials__list {
+      display: grid !important;
+    }
+    .testimonials__slide.is-img-1 {
+      grid-column: span 2;
+    }
+  }
+  @media (max-width: 479px) {
+    .testimonials__splide-nav .slider-btns {
+      display: flex !important;
+    }
+  }
+
+  @media (min-width: 480px) {
+  }
+
+  @media (max-width: 479px) {
+  }
+
+/* === INLINE STYLE 2 === */
+:is(a, button, .w-dropdown-toggle):focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+    transition: outline 0s;
+  }
+
+  .booking-form__input:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+  .booking-form__input:focus-visible::placeholder {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    color: var(--_colors---white-25);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .slider-btn:hover {
+      border-color: var(--_colors---dark);
+      transform: scale(0.965);
+    }
+    .slider-btn-prev:hover .slider-btn__arrow {
+      transform: translateX(-100%);
+    }
+    .slider-btn-next:hover .slider-btn__arrow {
+      transform: translateX(100%);
+    }
+
+    .booking-modal__close:hover {
+      transform: scale(0.965);
+      border-color: white;
+    }
+
+    .booking-form__input:hover {
+      background-color: #9ea2aa;
+    }
+    .booking-form__input:hover::placeholder {
+      color: white;
+    }
+
+    .btn:hover {
+      background-color: var(--_colors---white-40);
+      transform: scale(0.965);
+    }
+    .btn.is-back-btn:hover {
+      background-color: var(--_colors---white-10);
+      transform: scale(0.965);
+    }
+
+    :is(.booking-doctor-card, .booking-treatment-card):hover {
+      border-color: white;
+    }
+
+    .l-body__link:hover {
+      color: var(--_colors---dark);
+      text-decoration-color: var(--_colors---dark);
+    }
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+  }
+
+/* === INLINE STYLE 3 === */
+label.error {
+    color: red;
+    opacity: 80%;
+    font-family: var(--_fonts---caption--family);
+    font-size: var(--_fonts---caption--size);
+    line-height: var(--_fonts---caption--line-height);
+    font-weight: var(--_fonts---caption--weight-regular);
+    letter-spacing: var(--_fonts---caption--spacing);
+    margin-bottom: 0;
+    margin-top: 0.25rem;
+  }
+  .booking-modal.is-open {
+    display: flex;
+  }
+  .booking-step.is-done {
+    opacity: 1;
+  }
+  .booking-step.is-done + .booking-step__divider {
+    background-color: white;
+  }
+
+  [data-modal-anim='card'] {
+    opacity: 0;
+  }
+
+  .booking-treatments__input:checked + .booking-treatment-card {
+    background-color: white;
+    color: var(--_colors---primary-gray);
+  }
+  .booking-treatments__input:focus-visible + .booking-treatment-card {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+  .booking-doctors__input:checked + .booking-doctor-card {
+    background-color: white;
+    color: var(--_colors---primary-gray);
+  }
+  .booking-doctors__input:focus-visible + .booking-doctor-card {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+  .booking-form__btns [disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  @media (max-width: 479px) {
+    .booking-form__btns .btn {
+      flex-grow: 1;
+    }
+  }
+  @media (max-width: 479px) {
+    .booking-form__footer .btn.is-back-btn {
+      width: 100%;
+    }
+  }
+
+  .booking-form__input::placeholder {
+    color: var(--_colors---white-80);
+  }
+
+/* === INLINE STYLE 4 === */
+/* HERO */
+  @media (min-width: 480px) and (orientation: portrait) {
+    .hero {
+      height: 58.875rem;
+    }
+  }
+
+  /* SERVICES */
+  .service-card__title h3 {
+    font-size: var(--_fonts---paragraph-2--size);
+    line-height: var(--_fonts---paragraph-2--line-height);
+    font-weight: var(--_fonts---paragraph-2--weight-grotesk);
+    letter-spacing: var(--_fonts---paragraph-2--spacing);
+  }
+  .service-card__title h3 strong {
+    font-family: var(--_fonts---paragraph-2--family-serif);
+    font-weight: var(--_fonts---paragraph-2--weight-serif);
+    font-style: italic;
+    letter-spacing: -0.04rem;
+    line-height: 80%;
+  }
+
+  @media (min-width: 480px) {
+    .services__col-item:has([data-service-card='empty']) {
+      visibility: hidden;
+    }
+
+    .service-card__descr-wrap {
+      display: none;
+    }
+
+    .services__col-item.active .service-card__descr {
+      opacity: 1;
+    }
+    .services__col-item.active .service-card__active-bg {
+      transform: translateY(0);
+    }
+    .services__col-item.active .service-card__media {
+      transform: scale(0);
+    }
+    .services__col-item.active .service-card__top-text {
+      transform: translateX(0);
+    }
+    .services__col-item.active .service-card__descr {
+      opacity: 1;
+    }
+    .services__col-item.active .service-card__number {
+      color: var(--_colors---white-60);
+    }
+    .services__col-item.active .service-card__title {
+      color: white;
+    }
+    .services__col-item.active .service-card__top {
+      color: white;
+    }
+  }
+  @media (max-width: 479px) {
+    .services__col-item:has([data-service-card='empty']) {
+      display: none;
+    }
+  }
+
+  /* WHY US */
+  @media (min-width: 480px) and (orientation: landscape) {
+    .why-us {
+      height: 300vh;
+    }
+    .why-us__sticky {
+      position: sticky;
+      height: auto;
+      margin-top: 5rem;
+      top: calc(-17.875rem + 50vh);
+      /* top: calc(50vh - (17.875rem / 2)); */
+    }
+
+    .why-us__cards {
+      gap: 0rem;
+    }
+  }
+
+  /* TESTIMONIALS */
+  /* @media (min-width: 480px) {
+    .testimonials__list {
+      display: grid !important;
+    }
+    .testimonials__slide.is-first {
+      grid-column: 1 / 3;
+    }
+  } */

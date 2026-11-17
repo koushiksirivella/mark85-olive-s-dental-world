@@ -1,0 +1,91 @@
+{
+  "title": "Olive's Dental World - Madhapur, Hyderabad",
+  "website": "https://olivesdentalworld.com/",
+  "clinic_type": "Dental Clinic",
+  "city": "Hyderabad",
+  "rating": 4.9,
+  "reviews": 381,
+  "hours_text": "Open · Closes 8 pm",
+  "phone": "+919542032323",
+  "primary_email": "olivesdentalworld@gmail.com",
+  "instagram": "olivesdentalworld",
+  "images": [
+    "https://olivesdentalworld.com/wp-content/uploads/2024/11/Rectangle-3-Shape-02-300x300.png",
+    "https://olivesdentalworld.com/wp-content/uploads/2024/12/a-768x1151.jpg",
+    "https://olivesdentalworld.com/wp-content/uploads/2024/11/Rectangle-3-Shape-01-300x300.png",
+    "https://olivesdentalworld.com/wp-content/uploads/2024/11/White-Shape.png",
+    "https://olivesdentalworld.com/wp-content/uploads/2024/11/Secondary-Shape.png",
+    "https://olivesdentalworld.com/wp-content/uploads/2024/11/Aquamarine-Shape.png",
+    "https://olivesdentalworld.com/wp-content/uploads/2024/11/Vertical-Shape-02-300x150.png",
+    "https://olivesdentalworld.com/wp-content/uploads/2024/11/love-your-smile-love-your-life-shot-of-a-young-w-2022-09-14-01-30-30-utc-1.jpg"
+  ],
+  "doctors": [
+    "Dr. Aditya Jagini",
+    "Dr. Arjun Kumar"
+  ],
+  "services": [
+    "Dental Implants",
+    "Smile Design / Veneers",
+    "Root Canal / Endodontics",
+    "Orthodontics / Braces",
+    "Teeth Whitening",
+    "Laser Skin / Hair",
+    "Clinical Dermatology / Pigmentation"
+  ],
+  "claims": [
+    "Smile Designing Smile design is a comprehensive cosmetic dental treatment that combines multiple...",
+    "Teeth Whitening Teeth whitening involves the removal of stains and discolouration from the teeth, enhancing...",
+    "Dental Implants Dental implants are like anchors for replacement teeth.",
+    "When you lose a tooth...",
+    "Our job is to make it as comfortable and pain-free as possible!"
+  ],
+  "scraped_at": "2026-11-17T12:17:52",
+  "ftid": "0x748c7303b0123fb:0x61239a25cac0fb6c",
+  "maps_url": "https://www.google.com/maps/place/Olive%27s+Dental+World+-+Madhapur,+Hyderabad/data=!4m7!3m6!1s0x748c7303b0123fb:0x61239a25cac0fb6c!8m2!3d17.4457897!4d78.3993464!16s%2Fg%2F11vspgd96b!19sChIJ-yMBOzDHSAcRbPvAyiWaI2E?authuser=0&hl=en&g_ep=EgoyMDI2MTExMC4wIJJjKgBIAVAD&rclk=1",
+  "found_via": "dental implant clinic Madhapur Hyderabad",
+  "categories": [
+    "Dental clinic"
+  ],
+  "address": "Fortune Icon, Beside Jrt's Dream homes Road Number 7, Avenue 3",
+  "source": "playwright_gmaps",
+  "closes_at": "8:00 pm",
+  "site_status": "LIVE",
+  "final_url": "https://olivesdentalworld.com/",
+  "site_latency_sec": 1.06,
+  "emails": [
+    "olivesdentalworld@gmail.com",
+    "ubdigitalsolutions@gmail.com"
+  ],
+  "ig_confidence": "high",
+  "wa_links": [],
+  "has_wa_widget": false,
+  "has_booking_form": true,
+  "has_patient_survey": false,
+  "has_ig_agent_cta": false,
+  "has_viewport_meta": true,
+  "uses_https": true,
+  "site_platform": "WordPress / Template",
+  "site_title": "Olives Dental World : Best Dental Hospital in Madhapur, Hyderabad",
+  "site_h1": "Best Dental Clinic in Kavuri Hills, Madhapur – Olives Dental World",
+  "website_issues": [
+    "No interactive patient assessment survey/intake funnel",
+    "No instant WhatsApp follow-up/booking widget on site",
+    "Outdated/generic template UI (WordPress / Template)"
+  ],
+  "redesign_score": 7,
+  "qual_score": 100,
+  "tier": "A",
+  "ig_enrichment": {
+    "followers": 495,
+    "bio": "Centre for dental excellence🦷\nCreating Dazzling Smiles ✨\nExceptional Dental Care💫\nComprehensive Services😁\nCheck-ups and More! 🦷\n#olivesdentalworld",
+    "latest_post_date": "2026-11-14",
+    "latest_post_caption": "Little teeth deserve big care! 🦷💙 A healthy smile starts early. Regular dental check-ups help prevent cavities and keep those little smiles growing beautifully.",
+    "latest_post_url": "https://www.instagram.com/p/DftbPvthsLO/"
+  },
+  "rank": 7,
+  "is_top_10": true,
+  "cold_dm_touch1": "between instagram dms and your website at olive's dental world, where do more high-value dental implants enquiries drop off right now? this is koushik — i redesign clinic websites for bookings.",
+  "cold_dm_words": 31,
+  "video_mail_subject": "olive's dental world patient flow",
+  "video_mail_body": "hi dr. aditya jagini,\n\ni spent a few minutes on https://olivesdentalworld.com/ today (saw your instagram post \"little teeth deserve big care a healthy\" from 2026-11-14).\nnoticed a few leaks that cost high-ticket dental implants bookings: No interactive patient assessment survey/intake funnel; No instant WhatsApp follow-up/booking widget on site; Outdated/generic template UI (WordPress / Template).\n\nso i went ahead and redesigned the full website flow for Olive's Dental World + wired a live interactive patient survey with automated whatsapp & instagram follow-up agents.\n\nrecorded a quick 30-second video walking through it for you here:\n[ATTACH OR PASTE 30-SECOND VIDEO + DEMO LINK HERE]\n\nif you like how it feels, happy to walk through connecting it to your clinic number & ig inbox in 10 mins — today 7:30 pm or tomorrow 11:30 am?\n\n— koushik\nunderstone ai automation · hyderabad"
+}

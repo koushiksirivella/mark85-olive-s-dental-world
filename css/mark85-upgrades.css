@@ -1,0 +1,888 @@
+/* ==========================================================================
+   MARK 85 — LUXURY GRADIENT, MOTION & INTERACTIVE STUDIO UPGRADES
+   Preserves Nova Dental typography & layout while elevating depth & CRO.
+   ========================================================================== */
+
+:root {
+  --m85-grad-1: #0f172a;
+  --m85-grad-2: #0d9488;
+  --m85-grad-3: #38bdf8;
+  --m85-grad-accent: linear-gradient(135deg, #0d9488 0%, #2563eb 52%, #7c3aed 100%);
+  --m85-grad-soft: linear-gradient(135deg, rgba(13, 148, 136, 0.14) 0%, rgba(56, 189, 248, 0.12) 50%, rgba(167, 139, 250, 0.14) 100%);
+  --m85-grad-card: linear-gradient(155deg, #1b222c 0%, #222834 45%, #113a3d 100%);
+  --m85-grad-surface: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 50%, #f8fafc 100%);
+  --m85-glass: rgba(255, 255, 255, 0.72);
+  --m85-glass-dark: rgba(20, 23, 29, 0.82);
+  --m85-border-glass: rgba(255, 255, 255, 0.28);
+  --m85-wa: #25d366;
+  --m85-wa-grad: linear-gradient(135deg, #25d366 0%, #0d9488 100%);
+}
+
+/* Theme Presets controlled by Mark 85 Studio */
+html[data-m85-theme="aurora"] {
+  --m85-grad-accent: linear-gradient(135deg, #0d9488 0%, #0ea5e9 50%, #6366f1 100%);
+  --m85-grad-card: linear-gradient(155deg, #161d26 0%, #1c2a38 50%, #0f3c42 100%);
+  --m85-grad-surface: linear-gradient(180deg, #f4f8fb 0%, #eaf1f8 55%, #f6f9fc 100%);
+}
+html[data-m85-theme="champagne"] {
+  --m85-grad-accent: linear-gradient(135deg, #b45309 0%, #d97706 48%, #9f1239 100%);
+  --m85-grad-card: linear-gradient(155deg, #221e1b 0%, #332922 50%, #43281d 100%);
+  --m85-grad-surface: linear-gradient(180deg, #faf7f4 0%, #f3ece4 55%, #fbf9f6 100%);
+}
+html[data-m85-theme="emerald"] {
+  --m85-grad-accent: linear-gradient(135deg, #059669 0%, #10b981 50%, #0284c7 100%);
+  --m85-grad-card: linear-gradient(155deg, #12211d 0%, #172e28 50%, #0e3a3c 100%);
+  --m85-grad-surface: linear-gradient(180deg, #f3faf7 0%, #e7f4ee 55%, #f7fcfa 100%);
+}
+html[data-m85-theme="obsidian"] {
+  --m85-grad-accent: linear-gradient(135deg, #334155 0%, #64748b 50%, #0f172a 100%);
+  --m85-grad-card: linear-gradient(155deg, #181a1f 0%, #272b34 55%, #1d2430 100%);
+  --m85-grad-surface: linear-gradient(180deg, #f5f6f8 0%, #eceef2 55%, #f8f9fb 100%);
+}
+
+html, body {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+/* 1. Top Scroll Progress Ribbon */
+.m85-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 9998;
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+.m85-progress__bar {
+  width: 100%;
+  height: 100%;
+  background: var(--m85-grad-accent);
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+
+/* 2. Hero Atmospheric Gradient Scrim & Animated Serif Sheen */
+.hero {
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 65% 50% at 80% 25%, rgba(45, 212, 191, 0.18), transparent 65%),
+    radial-gradient(ellipse 55% 45% at 15% 85%, rgba(56, 189, 248, 0.16), transparent 60%),
+    linear-gradient(180deg, rgba(16, 20, 26, 0.25) 0%, rgba(16, 20, 26, 0.1) 45%, rgba(16, 20, 26, 0.65) 100%);
+  z-index: 1;
+}
+.hero .page-padding {
+  position: relative;
+  z-index: 3;
+}
+.text-display-serif,
+.h1-serif,
+.h2-serif {
+  background: var(--m85-grad-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  background-size: 200% 200%;
+  animation: m85GradientFlow 8s ease infinite;
+}
+.hero .text-display-serif {
+  background: linear-gradient(120deg, #ffffff 0%, #a5f3fc 45%, #fde68a 80%, #ffffff 100%);
+  background-size: 220% 220%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+@keyframes m85GradientFlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Hero Live Feature Dock */
+.m85-hero-dock {
+  position: relative;
+  z-index: 4;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  align-items: center;
+}
+.m85-dock-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(20, 24, 31, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+  font-family: var(--_fonts---caption--family);
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 0.28s cubic-bezier(.22,.61,.36,1), background 0.28s ease, border-color 0.28s ease;
+}
+.m85-dock-chip:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+.m85-dock-chip__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--m85-grad-accent);
+  box-shadow: 0 0 10px rgba(45, 212, 191, 0.8);
+}
+
+/* 3. Section Gradient Depth & Service Card Upgrade */
+.intro,
+.why-us,
+.team {
+  position: relative;
+  background: var(--m85-grad-surface);
+}
+.services__col-item.active .service-card__active-bg {
+  background: var(--m85-grad-card) !important;
+}
+.service-card {
+  position: relative;
+  transition: transform 0.35s cubic-bezier(.22,.61,.36,1), box-shadow 0.35s ease;
+  will-change: transform;
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(56, 189, 248, 0.14), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.service-card:hover::before {
+  opacity: 1;
+}
+.why-us-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f3f6fb 100%) !important;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(34, 35, 38, 0.08);
+}
+.testimonials-card {
+  background: linear-gradient(160deg, #ffffff 0%, #f4f7fb 100%);
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.05);
+  transition: transform 0.35s cubic-bezier(.22,.61,.36,1), box-shadow 0.35s ease;
+}
+.testimonials-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 50px rgba(13, 148, 136, 0.12);
+}
+
+/* 4. Interactive Before/After, Treatment Explainer & Visual Slot Picker (Clinical Pearl + Teal Luxury) */
+.m85-showcase {
+  padding: 6rem 0;
+  background:
+    radial-gradient(ellipse 60% 45% at 88% 12%, rgba(20, 184, 166, 0.14), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 10% 88%, rgba(56, 189, 248, 0.14), transparent 60%),
+    linear-gradient(180deg, #f8fbfc 0%, #eaf4f6 52%, #f6fafb 100%);
+  color: #0f172a;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(15, 118, 110, 0.1);
+  border-bottom: 1px solid rgba(15, 118, 110, 0.1);
+}
+.m85-showcase__inner {
+  position: relative;
+  z-index: 2;
+}
+.m85-showcase__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.m85-showcase__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.m85-tab {
+  padding: 0.65rem 1.15rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  color: #1e293b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+}
+.m85-tab.is-active,
+.m85-tab:hover {
+  background: var(--m85-grad-accent);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(13, 148, 136, 0.24);
+}
+
+/* Trust Counters Bar */
+.m85-trust-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 767px) {
+  .m85-trust-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.m85-trust-stat {
+  padding: 1.25rem 1.35rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(13, 148, 136, 0.14);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  transition: transform 0.28s ease, border-color 0.28s ease;
+}
+.m85-trust-stat:hover {
+  transform: translateY(-3px);
+  border-color: rgba(13, 148, 136, 0.4);
+}
+.m85-trust-stat__num {
+  font-family: var(--_fonts---h2--family-grotesk);
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 1.05;
+  background: var(--m85-grad-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.m85-trust-stat__label {
+  margin-top: 0.35rem;
+  font-size: 0.8125rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.m85-showcase__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+@media (max-width: 991px) {
+  .m85-showcase__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Before/After Drag Compare */
+.m85-compare {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  min-height: 31rem;
+  background: #e2e8f0;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.1);
+  user-select: none;
+  touch-action: pan-y;
+}
+.m85-compare__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.m85-compare__before-wrap {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 50% 0 0);
+}
+.m85-compare__before-img {
+  filter: saturate(0.68) contrast(0.92) brightness(0.92);
+}
+.m85-compare__badge {
+  position: absolute;
+  top: 1rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.88);
+  color: #0f172a;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  z-index: 4;
+}
+.m85-compare__badge.is-before { left: 1rem; }
+.m85-compare__badge.is-after { right: 1rem; background: var(--m85-grad-accent); color: #fff; border-color: transparent; }
+
+.m85-compare__divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #fff;
+  box-shadow: 0 0 18px rgba(13, 148, 136, 0.9);
+  z-index: 5;
+  pointer-events: none;
+}
+.m85-compare__handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  background: var(--m85-grad-accent);
+  border: 2px solid #fff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  cursor: ew-resize;
+  z-index: 6;
+}
+.m85-compare__caption {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #0f172a;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.85rem;
+  z-index: 4;
+}
+.m85-compare__metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.45rem;
+}
+.m85-metric-pill {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(13, 148, 136, 0.1);
+  color: #0f766e;
+  font-weight: 500;
+}
+
+/* Visual Slot Picker Panel (Light Pearl Glass) */
+.m85-pic-panel {
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.07);
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.15rem;
+}
+.m85-pic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+.m85-pic-thumb {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  padding: 0;
+  background: #e2e8f0;
+}
+.m85-pic-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.m85-pic-thumb.is-selected,
+.m85-pic-thumb:hover {
+  border-color: #0d9488;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(13, 148, 136, 0.18);
+}
+.m85-pic-thumb span {
+  position: absolute;
+  left: 0.35rem;
+  right: 0.35rem;
+  bottom: 0.35rem;
+  font-size: 0.6875rem;
+  padding: 0.22rem 0.45rem;
+  border-radius: 0.35rem;
+  background: rgba(15, 23, 42, 0.82);
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.m85-upload-row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.m85-upload-btn {
+  flex: 1;
+  min-width: 10rem;
+  padding: 0.72rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px dashed rgba(13, 148, 136, 0.5);
+  background: rgba(13, 148, 136, 0.08);
+  color: #0f766e;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.m85-upload-btn:hover {
+  background: rgba(13, 148, 136, 0.16);
+  border-color: #0d9488;
+}
+
+/* Patient Journey Scroll Timeline */
+.m85-journey {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 991px) {
+  .m85-journey {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 575px) {
+  .m85-journey {
+    grid-template-columns: 1fr;
+  }
+}
+.m85-journey-step {
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(15, 23, 42, 0.09);
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+  cursor: pointer;
+}
+.m85-journey-step:hover,
+.m85-journey-step.is-active {
+  transform: translateY(-3px);
+  border-color: #0d9488;
+  box-shadow: 0 14px 32px rgba(13, 148, 136, 0.14);
+}
+.m85-journey-step__num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0d9488;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.45rem;
+}
+.m85-journey-step h4 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+.m85-journey-step p {
+  margin: 0;
+  font-size: 0.84rem;
+  color: #475569;
+  line-height: 1.45;
+}
+
+/* 5. Interactive 60-Second Patient Assessment Section */
+.m85-assessment {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #eef2f7 0%, #f8fafc 100%);
+  position: relative;
+}
+.m85-assess-card {
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  background: #ffffff;
+  border: 1px solid rgba(34, 35, 38, 0.08);
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.08);
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+@media (max-width: 991px) {
+  .m85-assess-card {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+}
+.m85-assess-progress {
+  height: 6px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+  margin: 1.25rem 0;
+}
+.m85-assess-progress__fill {
+  height: 100%;
+  width: 33%;
+  background: var(--m85-grad-accent);
+  transition: width 0.4s cubic-bezier(.22,.61,.36,1);
+}
+.m85-assess-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+}
+@media (max-width: 575px) {
+  .m85-assess-options {
+    grid-template-columns: 1fr;
+  }
+}
+.m85-option-btn {
+  text-align: left;
+  padding: 1.1rem 1.2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(34, 35, 38, 0.14);
+  background: #f8fafc;
+  color: var(--_colors---dark);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(.22,.61,.36,1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.m85-option-btn:hover {
+  border-color: #0d9488;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(13, 148, 136, 0.12);
+}
+.m85-option-btn.is-selected {
+  background: var(--m85-grad-card);
+  color: #fff;
+  border-color: transparent;
+}
+.m85-option-btn small {
+  opacity: 0.72;
+  font-size: 0.8rem;
+}
+.m85-assess-summary {
+  padding: 1.5rem;
+  border-radius: 1.15rem;
+  background: var(--m85-grad-card);
+  color: #fff;
+}
+.m85-assess-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+.m85-btn-gradient {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  background: var(--m85-grad-accent);
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 10px 26px rgba(13, 148, 136, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.m85-btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(13, 148, 136, 0.42);
+}
+
+/* 6. Floating Section Storyteller Pill (Bottom-Left) */
+.m85-guide-pill {
+  position: fixed;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  background: var(--m85-glass-dark);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+  max-width: min(26rem, calc(100vw - 8rem));
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+@media (max-width: 640px) {
+  .m85-guide-pill {
+    display: none;
+  }
+}
+.m85-guide-pill__badge {
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  background: var(--m85-grad-accent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.m85-guide-pill__text {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.m85-studio-trigger {
+  margin-left: auto;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 0.75rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.m85-studio-trigger:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+/* 7. Customizable Floating WhatsApp Concierge (Bottom-Right) */
+.m85-wa-wrap {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 950;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+.m85-wa-fab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 999px;
+  background: var(--m85-wa-grad);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 14px 36px rgba(13, 148, 136, 0.38);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: transform 0.28s cubic-bezier(.22,.61,.36,1), box-shadow 0.28s ease;
+  position: relative;
+}
+.m85-wa-fab::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 999px;
+  background: var(--m85-wa-grad);
+  opacity: 0.35;
+  z-index: -1;
+  animation: m85Pulse 2.4s ease-out infinite;
+}
+@keyframes m85Pulse {
+  0% { transform: scale(0.95); opacity: 0.55; }
+  100% { transform: scale(1.16); opacity: 0; }
+}
+.m85-wa-fab:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.m85-wa-card {
+  width: min(22rem, calc(100vw - 2.5rem));
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: #141820;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  display: none;
+}
+.m85-wa-card.is-open {
+  display: block;
+}
+.m85-wa-card__head {
+  padding: 1.1rem 1.25rem;
+  background: var(--m85-wa-grad);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.m85-wa-card__body {
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.m85-wa-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.m85-wa-chip {
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+.m85-wa-chip:hover {
+  background: rgba(37, 211, 102, 0.25);
+  border-color: #25d366;
+}
+.m85-wa-input {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 0.875rem;
+  outline: none;
+}
+.m85-wa-send {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 0.75rem;
+  background: var(--m85-wa-grad);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 8. Mark 85 Live Studio Customizer Drawer */
+.m85-studio-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(26rem, 100vw);
+  background: #12161f;
+  color: #fff;
+  z-index: 9990;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.55);
+  transform: translateX(105%);
+  transition: transform 0.38s cubic-bezier(.22,.61,.36,1);
+  display: flex;
+  flex-direction: column;
+}
+.m85-studio-drawer.is-open {
+  transform: translateX(0);
+}
+.m85-studio-drawer__head {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.25), rgba(56, 189, 248, 0.12));
+}
+.m85-studio-drawer__body {
+  padding: 1.35rem 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  flex: 1;
+}
+.m85-studio-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 0.5rem;
+}
+.m85-studio-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 0.875rem;
+}
+.m85-theme-pills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+.m85-theme-pill {
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.m85-theme-pill.is-active {
+  border-color: #2dd4bf;
+  background: rgba(13, 148, 136, 0.22);
+}
+.m85-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+}
